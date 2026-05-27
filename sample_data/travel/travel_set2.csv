@@ -1,0 +1,18 @@
+Journey_ID,Staff_ID,Travel_Type,Departure,Arrival,Class,Distance_mi,Cost_USD,Nights
+J-1101,EMP-501,Flight,AMS,JFK,Business,3650,1380.00,
+J-1102,EMP-302,Flight,LHR,BOM,Economy,4480,590.00,
+J-1103,EMP-720,Flight,CDG,DXB,Premium Economy,3300,720.00,
+J-1104,EMP-501,Flight,FRA,SIN,Business,6600,2050.00,
+J-1105,EMP-115,Flight,LHR,JFK,Economy,3450,420.00,
+J-1106,EMP-302,Flight,AMS,ORD,Economy,4050,510.00,
+J-1107,EMP-720,Flight,LHR,LAX,Business,5450,1900.00,
+J-1108,EMP-501,Flight,CDG,NRT,Economy,6030,780.00,
+J-1109,EMP-115,Flight,FRA,MEX,,3200,,
+J-1110,EMP-302,Flight,AMS,BKK,Economy,,920.00,
+J-1111,EMP-720,Flight,LHR,SIN,Business,6756,2300.00,
+J-1112,EMP-501,Flight,JFK,LAX,First,2475,2800.00,
+J-1113,EMP-302,Hotel,AMS,AMS,,,,3
+J-1114,EMP-720,Hotel,LAX,LAX,,,430.00,
+J-1115,EMP-115,Car Rental,,,, 210,88.00,
+J-1116,EMP-501,Train,,,,180,36.00,
+J-1117,EMP-115,Rideshare,,,,22,31.00,

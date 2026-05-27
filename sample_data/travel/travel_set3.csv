@@ -1,0 +1,18 @@
+booking_ref,employee_no,trip_type,from_city,to_city,seat_class,flight_miles,trip_cost,hotel_nights
+BK-5001,E-8801,Flight,SFO,LHR,Economy,5365,650.00,
+BK-5002,E-8802,Flight,JFK,CDG,Business,3625,1420.00,
+BK-5003,E-8803,Flight,ORD,NRT,Economy,6280,810.00,
+BK-5004,E-8801,Flight,LHR,DXB,Premium Economy,3410,680.00,
+BK-5005,E-8804,Flight,BOM,SIN,Economy,2460,290.00,
+BK-5006,E-8802,Flight,JFK,MEX,Economy,2090,340.00,
+BK-5007,E-8803,Flight,LAX,HND,Business,5470,2100.00,
+BK-5008,E-8804,Flight,CDG,BOM,Economy,,740.00,
+BK-5009,E-8801,Flight,SFO,ORD,First,1846,1800.00,
+BK-5010,E-8802,Flight,LHR,LAX,Economy,,,
+BK-5011,E-8803,Flight,NRT,SYD,Business,5120,2250.00,
+BK-5012,E-8804,Flight,SIN,DEL,Economy,1670,210.00,
+BK-5013,E-8801,Hotel,LHR,LHR,,,,5
+BK-5014,E-8803,Hotel,NRT,NRT,,,510.00,
+BK-5015,E-8802,Car Rental,,,, 160,72.00,
+BK-5016,E-8804,Bus,,,,45,12.00,
+BK-5017,E-8801,Taxi,,,,14,22.00,

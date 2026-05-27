@@ -1,0 +1,18 @@
+ID,Employee,Type,From,To,Cabin,Miles,Price,Nights
+TR-001,John Smith,Flight,NYC,LON,Economy,3459,480.00,
+TR-002,Sarah Lee,Flight,LON,DXB,Business,3414,1350.00,
+TR-003,John Smith,Flight,CHI,LAX,Economy,1745,215.00,
+TR-004,Mike Patel,Flight,BOM,LON,Economy,4478,520.00,
+TR-005,Sarah Lee,Flight,DXB,SIN,Premium Economy,3648,790.00,
+TR-006,Amy Chen,Flight,SFO,JFK,Economy,2586,310.00,
+TR-007,Mike Patel,Flight,NYC,PAR,Business,3625,1480.00,
+TR-008,Amy Chen,Flight,LAX,TYO,Economy,5470,740.00,
+TR-009,John Smith,Flight,LON,NYC,First,3459,2200.00,
+TR-010,Sarah Lee,Flight,SIN,SYD,,3912,,
+TR-011,Mike Patel,Flight,BOM,DXB,Economy,,180.00,
+TR-012,Amy Chen,Flight,JFK,CDG,Business,3625,1520.00,
+TR-013,Sarah Lee,Hotel,DXB,DXB,,,,3
+TR-014,John Smith,Hotel,LON,LON,,,380.00,
+TR-015,Mike Patel,Car Rental,,,, 195,82.00,
+TR-016,Amy Chen,Ferry,,,,28,55.00,
+TR-017,John Smith,Taxi,,,,12,19.00,
