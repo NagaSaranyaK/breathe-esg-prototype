@@ -58,6 +58,7 @@ WSGI_APPLICATION = 'core.wsgi.application'
 # Database (PostgreSQL via DATABASE_URL environment variable)
 DATABASES = {
     'default': dj_database_url.config(
+        default=config('DATABASE_URL', default=''),
         conn_max_age=600,
     )
 }
@@ -78,8 +79,13 @@ MEDIA_ROOT  = BASE_DIR / 'media'
 # CORS
 CORS_ALLOWED_ORIGINS = [
     origin.strip()
-    for origin in os.getenv('CORS_ALLOWED_ORIGINS', 'http://localhost:3000,http://localhost:5173').split(',')
+    for origin in os.getenv('CORS_ALLOWED_ORIGINS', 'http://localhost:3000,http://localhost:5173,http://localhost:5174').split(',')
     if origin.strip()
+]
+CORS_ALLOW_HEADERS = [
+    'accept',
+    'content-type',
+    'x-tenant-id',
 ]
 
 # Django REST Framework
