@@ -2,7 +2,7 @@
 
 A multi-tenant prototype that ingests raw CSV exports from three enterprise source systems, normalises them to a canonical emissions ledger, and surfaces them in a React review dashboard.
 
-> **Live demo:** _deploy to Vercel + Railway and update this URL_
+> **Live demo:** https://breathe-esg-prototype-ten.vercel.app
 
 ---
 
@@ -155,25 +155,32 @@ Each set uses different column naming conventions — the frontend field-mapping
 
 ### Backend + Database → Railway
 
+**Live:** https://breathe-esg-prototype-production.up.railway.app
+
 1. Sign in to [railway.app](https://railway.app) with GitHub.
 2. New Project → Deploy from GitHub → select this repo.
 3. Add a **PostgreSQL** service (+ New → Database → PostgreSQL).
 4. Add a **Web Service** from the repo:
    - Root Directory: `backend`
-   - Start Command: `gunicorn core.wsgi:application --bind 0.0.0.0:$PORT --workers 2`
+   - Builder: Nixpacks
+   - Build Command: `pip install -r requirements.txt && python manage.py collectstatic --noinput`
+   - Start Command: `python manage.py migrate && gunicorn core.wsgi:application --bind 0.0.0.0:$PORT --workers 2`
 5. Set environment variables:
-   - `DATABASE_URL` → Railway provides this automatically from PostgreSQL
+   - `DATABASE_URL` → `${{Postgres.DATABASE_PUBLIC_URL}}` (reference variable)
    - `SECRET_KEY` → any random string
-   - `ALLOWED_HOSTS` → `your-app.up.railway.app`
-   - `CORS_ALLOWED_ORIGINS` → `https://your-frontend.vercel.app`
-   - `PYTHON_VERSION` → `3.13.3`
+   - `DEBUG` → `False`
+   - `ALLOWED_HOSTS` → `.railway.app`
+   - `CORS_ALLOWED_ORIGINS` → `https://breathe-esg-prototype-ten.vercel.app`
+6. Settings → Networking → Generate Domain.
 
 ### Frontend → Vercel
+
+**Live:** https://breathe-esg-prototype-ten.vercel.app
 
 1. Sign in to [vercel.com](https://vercel.com) with GitHub.
 2. Import this repo → set Root Directory to `frontend`.
 3. Framework Preset: Vite.
-4. Add environment variable: `VITE_API_BASE` = `https://your-railway-backend.up.railway.app`
+4. Add environment variable: `VITE_API_BASE` = `https://breathe-esg-prototype-production.up.railway.app`
 5. Deploy.
 
 ---
